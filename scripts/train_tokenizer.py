@@ -112,10 +112,12 @@ if __name__ == "__main__":
     
     # Option 1: Train on all files (RECOMMENDED for better coverage)
     ALL_FILES = [
-        os.path.join(os.getcwd(), "../dataset/general/others", f"hi_part_{i}.txt") for i in range(1, 6)
+        os.path.join(os.getcwd(), "dataset","general", "others", f"hi_part_{i}.txt") for i in range(1, 6)
     ]
     VOCAB_SIZE = 24000
-    MODEL_PREFIX = "../models/devanagari_sp"
+    
+    MODEL_PREFIX = os.path.join(os.getcwd(), "models","devanagari_sp",)
+
     # Files are already processed, use them directly  
     PROCESSED_FILES = []
 
