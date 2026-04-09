@@ -41,7 +41,7 @@ indic-devanagari-tokenizer/
 │   ├── general/
 │   │   ├── news/
 │   │   ├── wiki/
-│   │   ├── books/
+│   │   ├── other/
 │   │
 │   ├── philosophy/
 │       ├── gita/
@@ -141,15 +141,6 @@ Avoid:
 * Check token splits for compound Hindi words
 * Monitor average tokens per sentence
 * Inspect vocabulary for noise or artifacts
-
----
-
-## 🧭 Roadmap
-
-* [ ] Add dataset cleaning pipeline (deduplication + filtering)
-* [ ] Support additional Indic scripts
-* [ ] Integration with LLM training frameworks
-* [ ] Tokenizer benchmarking tools
 
 ---
 
