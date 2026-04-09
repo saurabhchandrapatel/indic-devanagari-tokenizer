@@ -65,7 +65,7 @@ indic-devanagari-tokenizer/
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/your-username/indic-devanagari-tokenizer.git
+git clone https://github.com/saurabhchandrapatel/indic-devanagari-tokenizer.git
 cd indic-devanagari-tokenizer
 
 pip install -r requirements.txt
