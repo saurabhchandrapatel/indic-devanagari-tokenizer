@@ -112,24 +112,19 @@ if __name__ == "__main__":
     
     # Option 1: Train on all files (RECOMMENDED for better coverage)
     ALL_FILES = [
-        "./dataset/others/hi_part_1.txt",
-        "./dataset/others/hi_part_2.txt",
-        "./dataset/others/hi_part_3.txt",
-        "./dataset/others/hi_part_4.txt",
-        "./dataset/others/hi_part_5.txt",
+        os.path.join(os.getcwd(), "../dataset/general/others", f"hi_part_{i}.txt") for i in range(1, 6)
     ]
-    
     VOCAB_SIZE = 24000
-    MODEL_PREFIX = "./models/devanagari_sp"
+    MODEL_PREFIX = "../models/devanagari_sp"
+    # Files are already processed, use them directly  
     PROCESSED_FILES = []
 
     for path in ALL_FILES:
         out_path = path.replace(".txt", "_processed.txt")
         preprocess_file(path, out_path)
         PROCESSED_FILES.append(out_path)
-        
+
     # Choose one:
-    # OPTION A: Single file (faster, less coverage)
     model_path = train_sentencepiece_tokenizer(
         corpus_paths=PROCESSED_FILES,
         vocab_size=VOCAB_SIZE,

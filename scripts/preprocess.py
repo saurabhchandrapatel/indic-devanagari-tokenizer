@@ -12,8 +12,6 @@ DEVANAGARI_CLUSTER = r'\p{Devanagari}(?:\p{M}|\u094D\p{Devanagari})*'
 pattern = re.compile(
     f"({DEVANAGARI_CLUSTER}+|[a-zA-Z]+|\\d+|[^\\s])"
 )
-model_prefix = "./devanagari_tokenizer/devanagari_sp"
-
 def panini_pre_tokenize(text):
     return [m.group(0) for m in pattern.finditer(text)]
 
