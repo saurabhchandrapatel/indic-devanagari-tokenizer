@@ -73,22 +73,6 @@ pip install -r requirements.txt
 
 ---
 
-## 🧹 Data Preprocessing
-
-Clean and normalize raw text before training:
-
-```bash
-python scripts/preprocess.py
-```
-
-Key steps:
-
-* Unicode normalization (NFKC)
-* Removal of corrupted characters
-* Sentence-level formatting
-* Length filtering
-
----
 
 ## 🧠 Training the Tokenizer
 
